@@ -1,0 +1,111 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="Rudra.Site2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="icon/css/all.css" rel="stylesheet" />
+    <style>
+        .navbar-custom {
+            background-color: #34495e; /* Dark blue-grey */
+        }
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav-link {
+            color: #ecf0f1; /* Light grey */
+            transition: color 0.3s;
+        }
+        .navbar-custom .nav-link:hover {
+            color: #3498db; /* Light blue */
+            text-decoration: none;
+        }
+        .navbar-custom .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #3498db; /* Light blue */
+            transition: width 0.4s;
+        }
+        .navbar-custom .nav-link:hover::after {
+            width: 100%;
+        }
+        .navbar-custom .nav-link i {
+            margin-right: 8px;
+        }
+        .navbar-custom .navbar-brand i {
+            font-size: 1.5rem;
+            margin-right: 5px;
+        }
+        .navbar-custom .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        .navbar-custom .navbar-toggler-icon {
+            background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%28255, 255, 255, 0.5%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+        }
+    </style>
+</head>
+<body class="body1">
+    <form id="form1" runat="server">
+        
+        <%-- NavBar start --%>
+        <nav class="navbar sticky-top navbar-expand-lg navbar-custom">
+            <div class="container">
+                <a href="#" class="navbar-brand"><i class="fa-solid fa-book-open"></i> Kisan Khata</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a href="Addtractor.aspx" class="nav-link"><i class="fa-solid fa-tractor"></i>Add Tractor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Addlivestock.aspx" class="nav-link"><i class="fa-solid fa-cow"></i>Add Livestocks</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="income1.aspx" class="nav-link"><i class="fa-solid fa-dollar-sign"></i>Income</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Expenses.aspx" class="nav-link"><i class="fa-solid fa-receipt"></i>Expenses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="incomereport.aspx" class="nav-link"><i class="fa-solid fa-file-invoice-dollar"></i>Income Report</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Logout.aspx" class="nav-link"><i class="fa-solid fa-sign-out-alt"></i>Logout</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" style="color: red" hidden="hidden"><i class="fas fa-user-times text-danger"></i>Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <%-- Navbar End --%>
+
+        <%-- PlaceHolder start --%>
+        <div class="container">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <%-- Place Holder End --%>
+
+        <%-- Footer start --%>
+        <footer class="bg-light" style="height: 42px">
+            <div class="container">
+                <div class="row">
+                    <p class="lead text-center py-1">
+                        Copywrite 2023-24 &copy; &nbsp; Design By - Rudra
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <%-- Footer End --%>
+    </form>
+</body>
+</html>
